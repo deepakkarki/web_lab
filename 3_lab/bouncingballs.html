@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var ctx;
+			var WIDTH = 500; var HEIGHT = 500;
+ 			var r = 10;
+			var dx1 = -2; var dy1 = -2;
+			var dx2 = 2; var dy2 = -2;
+			var x1 = WIDTH-r; var y1 = HEIGHT-r;
+			var x2 = 0+r; var y2 = HEIGHT-r;
+			
+			function circle(x,y,r,color) {
+				ctx.beginPath();
+				ctx.arc(x, y, r, 0, Math.PI*2, true);
+				ctx.fillStyle = color;
+  				ctx.fill();
+			}
+ 
+			function clear() {
+				ctx.clearRect(0, 0, WIDTH, HEIGHT);
+			}
+ 
+			function init() {
+  				var canvas = document.getElementById("myCanvas");
+  				ctx = canvas.getContext("2d");
+  				setInterval(draw, 10);
+			}
+ 
+			function draw() {
+				clear();
+  				circle(x1, y1, r, "red");
+				circle(x2, y2, r, "blue");
+ 
+  				if (x1 + r + dx1 > WIDTH || x1 - r + dx1 < 0)
+    					dx1 = -dx1;
+    					
+  				if (y1 + dy1 +r> HEIGHT || y1 + dy1 - r < 0)
+    					dy1 = -dy1;
+
+				if (x2 + dx2 +r > WIDTH || x2 - r+ dx2 < 0)
+    					dx2 = -dx2;
+    					
+  				if (y2 + r+ dy2 > HEIGHT || y2 - r +dy2 < 0)
+    					dy2 = -dy2;
+				
+				if ((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2) <= 200) {
+					dx1 = -dx1;
+					dx2 = -dx2;
+				}
+ 
+  				x1 += dx1;
+  				y1 += dy1;
+
+				x2 += dx2;
+  				y2 += dy2;
+			}
+			
+			function factorial() {
+				var num = document.getElementById("num").value;
+				var fact = 1;
+
+				while (num > 1) {
+					fact = fact * num;
+					num -= 1;
+				}
+				alert("Factorial is" + fact);
+			}
+		</script>
+		<title>Bouncing Balls</title>
+	</head>
+	<body onload="init();">
+		<canvas id="myCanvas" width="500" height="500" style="border:2px solid black">
+			Sorry, your browser doesn't support HTML Canvas.
+                </canvas>
+		<p></p>
+		<input id="num" type="number" />
+		<button onclick="factorial();">Factorial</button>
+		
+ 
+        </body>
+</html>
