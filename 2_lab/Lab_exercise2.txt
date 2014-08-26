@@ -1,0 +1,49 @@
+Instructions for the 2nd laboratory exercise.
+
+1. Design and build an HTML5 page that represents a Newspaper article.
+    The article will have the Newspaper name with a logo (top-centered).
+
+2. Demonstrate the following HTML5 semantic tags.
+   a) <article>   b) <datetime> c) <section>  
+   d) <hgroup>  e) <aside>  f) <footer> g) <nav>
+   
+3. The newspaper article will have atleast 3 sections, each section being 
+   represented by a paragraph of text.
+   
+4. The article will have a <nav> tag that contains a set of hyperlinks for
+   navigation within the page. See the attached pic.
+   In the attached pic, the navigation bar is shown on top with the links - "Home",
+   "About us" and "Contact us". In your article the navigation bar should be
+   shown exactly as in the pic, but the link names can be different (relevant to 
+   your article). Clicking on the links will take you to various parts within the
+   page.
+   
+5. Atleast one section will have a <video> element.
+
+6. Atleast one section will have an image.
+
+7. Atleast one section will have a hyperlink. On clicking the hyperlink, a very brief
+   summary (max 2 lines) appears on the right hand side of the page (The original page
+   remains as is, but new content gets added on the right hand side).
+   You should use the <aside> element for this. Remember that <aside> and all the
+   elements listed in step(2) above, do not have any impact on page format because
+   they are semantic tags.
+   
+   (hint)To achieve this functionality, place a piece of text beforehand in the page 
+   (on the right hand side) and hide it using the "visibility" or "display" css property. 
+   On clicking the hyperlink, you can change the css property to show the text. 
+   You can hide the text again when the hyperlink is clicked a second time.
+
+8. The page must have a footer. Use the <footer> element.
+
+9. (hint).In order to achieve the functionality in step(4) above, you can create 
+   an unordered list with three <li> elements. Each <li> element
+   will inturn have an <a> element.Adjust the "padding" css property 
+   for proper positioning. Also, by default, <li> elements are block elements
+   which means they will be positioned one below another. So change the 
+   "display" css property to "inline" so that the list elements come side-by-side.
+   Also use the text-decoration property to remove underlines for the anchors.
+   Adjust the background-color property to provide background color.
+   
+10. Atleast one section will have a cartoon. You need to draw this using the <canvas>
+    element. The cartoon can be very simple.

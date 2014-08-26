@@ -1,0 +1,43 @@
+#pageHeader {
+	text-align: center;
+}
+
+#navigation {
+	float: left;
+}
+
+#pageContent {
+	margin-left: 200px;
+
+}
+
+#articleMain {
+	float: left;
+	width: 500px;
+}
+
+#toTheSide {
+	float: right;
+}
+
+#pageFooter {
+  height: 59px;
+  margin: 0 auto;
+  color: #fff;
+  clear: both;
+  padding: 2em 2em;
+  background: #000;
+  position: relative;
+  top: 508px;
+
+}
+aside {
+	visibility: hidden;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #b0e0e6;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	var i = 0;
+	var j = 0;
+	function toggleA() {
+		var x = document.getElementById("android");
+		if (i%2==0)
+			x.style.visibility = "visible";
+		else
+			x.style.visibility = "hidden";
+		i++;
+	}
+	function toggleT() {
+		var x = document.getElementById("iphone");
+		if (j%2==0)
+			x.style.visibility = "visible";
+		else
+			x.style.visibility = "hidden";
+		j++;
+	}
+</script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="OT.css">
+	<title></title>
+</head>
+<body>
+	<div id="pageHeader">
+		<img src="logo.png" alt="Future font">
+		<h4 style="color:sienna;margin-left:20px;">We bring you the future</h4>
+	</div>
+	<div class="center">
+		<nav style="text-align: center;">
+			<a href="More News" >More News </a> |
+			<a href="Sponsers" > Tech review </a> |
+			<a href="Contact Us">Contact us </a>
+		</nav>
+	</div>
+	<br>
+	<div>
+	<div id="pageContent">
+		<article>
+			<header>
+				<h2>Iphone 9 to be released</h2>
+				<p><time datetime="2014-03-10"></time></p>
+			</header>
+			
+			<section id="picture">
+				<img src="iphone.jpg" alt="PromotionalPoster">
+				<br>
+				<caption>Iphone 9</caption>
+			</section>
+			<div id="articleMain">
+			<section class="text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Phone. <a href="javascript:toggleA();">Android</a> and phone <a href="javascript:toggleT();">Iphone</a>.</p>
+			</section>
+			<section class="text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut elementum urna, at blandit ante. In volutpat feugiat nunc, at egestas ligula sagittis id. Fusce a ullamcorper mi. Ut aliquam magna in purus accumsan rhoncus. Mauris ac magna dapibus, placerat nunc sed, congue ante. Android <a href="Phone">Phone</a></p>
+			</section>
+			<section>
+				<video width="320" height="240" controls>
+				  <source src="video.mpeg" type="video/mpeg">
+				Your browser does not support the video tag.
+				</video>
+			</section>
+			<section class="text">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut elementum urna, at blandit ante. In volutpat feugiat nunc, at egestas ligula sagittis id. Fusce a ullamcorper mi. Ut aliquam magna in purus accumsan rhoncus. Mauris ac magna dapibus, placerat nunc sed, congue ante. </p>
+			</section>
+			<section>
+				<br>
+				<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+				<br> 
+			</section>
+			<footer>
+					<p>Posted by: Deepak Karki</p>
+					<p>timonas@ot.sh</p>
+			</footer>
+			</div>
+			<div id="toTheSide">
+				<aside id="android" >
+					<p>Android is awesome. for more information <a href="">Wikipedia Page</a></p>
+				</aside>
+				<aside id="iphone" >
+					<p>Iphone is awesome. for more information <a href="">Wikipedia Page</a></p>
+				</aside>
+			</div>		
+		</article>
+	</div> 
+	</div>
+	<div id="pageFooter">
+		<p>Copyright of The Future times</p>
+	</div>	
+</body>
+<script>
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0,0,150,75);
+</script> 
+</html>
